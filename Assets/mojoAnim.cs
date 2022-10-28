@@ -8,11 +8,16 @@ public class mojoAnim : MonoBehaviour
     public GameObject bioMojoPrefab;
     public GameObject walkBtn;
     public GameObject stopBtn;
-    public GameObject btnSit;
+
     public GameObject sitDownBtn;
     public GameObject liftPawBtn;
     public GameObject pawDownBtn;
     public GameObject standUpBtn;
+
+    public GameObject layDownBtn;
+    public GameObject InspectBtn;
+    public GameObject pawDownInspectBtn;
+    public GameObject standUpBtn_lay;
 
     public GameObject walkBtn_deactivate;
 
@@ -76,9 +81,34 @@ public class mojoAnim : MonoBehaviour
     public void OnLay()
     {
         ExecuteTrigger("lay");
+        InspectBtn.SetActive(true);
+        layDownBtn.SetActive(false);
+
     }
 
+    public void OnLayLift()
+    {
+        ExecuteTrigger("lay_lift");
+        InspectBtn.SetActive(false);
+        pawDownInspectBtn.SetActive(true);
 
+    }
+
+    public void OnLayLiftRev()
+    {
+        ExecuteTrigger("lay_lift_rev");
+        standUpBtn_lay.SetActive(true);
+        pawDownInspectBtn.SetActive(false);
+
+    }
+
+    public void OnStandUpLay()
+    {
+        ExecuteTrigger("standup_lay");
+        standUpBtn_lay.SetActive(false);
+        layDownBtn.SetActive(true);
+
+    }
 
 
 
