@@ -25,12 +25,8 @@ public class mojoAnim : MonoBehaviour
     public GameObject liftPawBtn_deactivate;
     public GameObject InspectBtn_deactivate;
 
-
-
-
-
-
-
+    
+ 
     private void ExecuteTrigger(string trigger)
     {
         if (bioMojoPrefab != null)
@@ -44,49 +40,54 @@ public class mojoAnim : MonoBehaviour
     }
 
 
+
     public void OnWalk()
     {
         ExecuteTrigger("walk");
         
-        walkBtn.SetActive(false);
+ //     walkBtn.SetActive(false);
         sitDownBtn.SetActive(false);
         layDownBtn.SetActive(false);
 
-        walkBtn_deactivate.SetActive(true);
+ //     walkBtn_deactivate.SetActive(true);
         sitDownBtn_deactivate.SetActive(true);
         layDownBtn_deactivate.SetActive(true);
 
-        stopBtn.SetActive(true);
+ //     stopBtn.SetActive(true);
 
     }
     public void OnStop()
     {
         ExecuteTrigger("stopWalking");
 
-        walkBtn.SetActive(true);
+//      walkBtn.SetActive(true);
         sitDownBtn.SetActive(true);
         layDownBtn.SetActive(true);
 
-        walkBtn_deactivate.SetActive(false);
+//      walkBtn_deactivate.SetActive(false);
         sitDownBtn_deactivate.SetActive(false);
         layDownBtn_deactivate.SetActive(false);
 
-        stopBtn.SetActive(false);
+//      stopBtn.SetActive(false);
 
     }
     public void OnSit()
     {
         ExecuteTrigger("sit");
 
-        walkBtn_deactivate.SetActive(true);
+ //     walkBtn_deactivate.SetActive(true);
         sitDownBtn_deactivate.SetActive(true);
         layDownBtn_deactivate.SetActive(true);
 
         sitDownBtn.SetActive(false);
-        walkBtn.SetActive(false);
+//      walkBtn.SetActive(false);
         layDownBtn.SetActive(false);
 
         liftPawBtn.SetActive(true);
+        bioMojoPrefab.GetComponent<player>().enabled = false;
+        bioMojoPrefab.GetComponent<toggleMenu>().enabled = false;
+
+
 
     }
 
@@ -116,15 +117,17 @@ public class mojoAnim : MonoBehaviour
     {
         ExecuteTrigger("standup_sit");
 
-        walkBtn.SetActive(true);
+//      walkBtn.SetActive(true);
         sitDownBtn.SetActive(true);
         layDownBtn.SetActive(true);
 
-        walkBtn_deactivate.SetActive(false);
+//      walkBtn_deactivate.SetActive(false);
         sitDownBtn_deactivate.SetActive(false);
         layDownBtn_deactivate.SetActive(false);
 
         standUpBtn.SetActive(false);
+        bioMojoPrefab.GetComponent<player>().enabled = true;
+        bioMojoPrefab.GetComponent<toggleMenu>().enabled = true;
 
     }
 
@@ -132,15 +135,18 @@ public class mojoAnim : MonoBehaviour
     {
         ExecuteTrigger("lay");
 
-        walkBtn.SetActive(false);
+ //     walkBtn.SetActive(false);
         sitDownBtn.SetActive(false);
         layDownBtn.SetActive(false);
 
-        walkBtn_deactivate.SetActive(true);
+ //     walkBtn_deactivate.SetActive(true);
         sitDownBtn_deactivate.SetActive(true);
         layDownBtn_deactivate.SetActive(true);
 
         InspectBtn.SetActive(true);
+
+        bioMojoPrefab.GetComponent<player>().enabled = false;
+        bioMojoPrefab.GetComponent<toggleMenu>().enabled = false;
 
     }
 
@@ -170,20 +176,18 @@ public class mojoAnim : MonoBehaviour
     {
         ExecuteTrigger("standup_lay");
 
-        walkBtn.SetActive(true);
+//      walkBtn.SetActive(true);
         sitDownBtn.SetActive(true);
         layDownBtn.SetActive(true);
 
-        walkBtn_deactivate.SetActive(false);
+ //     walkBtn_deactivate.SetActive(false);
         sitDownBtn_deactivate.SetActive(false);
         layDownBtn_deactivate.SetActive(false);
 
-
-
         standUpBtn_lay.SetActive(false);
 
-
-
+        bioMojoPrefab.GetComponent<player>().enabled = true;
+        bioMojoPrefab.GetComponent<toggleMenu>().enabled = true;
 
     }
 
