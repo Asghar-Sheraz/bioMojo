@@ -20,6 +20,12 @@ public class mojoAnim : MonoBehaviour
     public GameObject standUpBtn_lay;
 
     public GameObject walkBtn_deactivate;
+    public GameObject sitDownBtn_deactivate;
+    public GameObject layDownBtn_deactivate;
+    public GameObject liftPawBtn_deactivate;
+    public GameObject InspectBtn_deactivate;
+
+
 
 
 
@@ -41,48 +47,100 @@ public class mojoAnim : MonoBehaviour
     public void OnWalk()
     {
         ExecuteTrigger("walk");
+        
         walkBtn.SetActive(false);
-        stopBtn.SetActive(true);
+        sitDownBtn.SetActive(false);
+        layDownBtn.SetActive(false);
+
         walkBtn_deactivate.SetActive(true);
+        sitDownBtn_deactivate.SetActive(true);
+        layDownBtn_deactivate.SetActive(true);
+
+        stopBtn.SetActive(true);
 
     }
     public void OnStop()
     {
         ExecuteTrigger("stopWalking");
+
         walkBtn.SetActive(true);
-        stopBtn.SetActive(false);
+        sitDownBtn.SetActive(true);
+        layDownBtn.SetActive(true);
+
         walkBtn_deactivate.SetActive(false);
+        sitDownBtn_deactivate.SetActive(false);
+        layDownBtn_deactivate.SetActive(false);
+
+        stopBtn.SetActive(false);
+
     }
     public void OnSit()
     {
         ExecuteTrigger("sit");
+
+        walkBtn_deactivate.SetActive(true);
+        sitDownBtn_deactivate.SetActive(true);
+        layDownBtn_deactivate.SetActive(true);
+
         sitDownBtn.SetActive(false);
+        walkBtn.SetActive(false);
+        layDownBtn.SetActive(false);
+
         liftPawBtn.SetActive(true);
+
     }
+
     public void OnLiftPaw()
     {
         ExecuteTrigger("sit_lift");
+
         liftPawBtn.SetActive(false);
         pawDownBtn.SetActive(true);
+
+        liftPawBtn_deactivate.SetActive(true);
+
     }
+
     public void OnSitLiftRev()
     {
         ExecuteTrigger("sit_lift_rev");
+
         standUpBtn.SetActive(true);
         pawDownBtn.SetActive(false);
+
+        liftPawBtn_deactivate.SetActive(false);
+
     }
+
     public void OnStandUpSit()
     {
         ExecuteTrigger("standup_sit");
+
+        walkBtn.SetActive(true);
         sitDownBtn.SetActive(true);
+        layDownBtn.SetActive(true);
+
+        walkBtn_deactivate.SetActive(false);
+        sitDownBtn_deactivate.SetActive(false);
+        layDownBtn_deactivate.SetActive(false);
+
         standUpBtn.SetActive(false);
 
     }
+
     public void OnLay()
     {
         ExecuteTrigger("lay");
-        InspectBtn.SetActive(true);
+
+        walkBtn.SetActive(false);
+        sitDownBtn.SetActive(false);
         layDownBtn.SetActive(false);
+
+        walkBtn_deactivate.SetActive(true);
+        sitDownBtn_deactivate.SetActive(true);
+        layDownBtn_deactivate.SetActive(true);
+
+        InspectBtn.SetActive(true);
 
     }
 
@@ -92,6 +150,10 @@ public class mojoAnim : MonoBehaviour
         InspectBtn.SetActive(false);
         pawDownInspectBtn.SetActive(true);
 
+        InspectBtn_deactivate.SetActive(true);
+
+
+
     }
 
     public void OnLayLiftRev()
@@ -100,13 +162,28 @@ public class mojoAnim : MonoBehaviour
         standUpBtn_lay.SetActive(true);
         pawDownInspectBtn.SetActive(false);
 
+        InspectBtn_deactivate.SetActive(false);
+
     }
 
     public void OnStandUpLay()
     {
         ExecuteTrigger("standup_lay");
-        standUpBtn_lay.SetActive(false);
+
+        walkBtn.SetActive(true);
+        sitDownBtn.SetActive(true);
         layDownBtn.SetActive(true);
+
+        walkBtn_deactivate.SetActive(false);
+        sitDownBtn_deactivate.SetActive(false);
+        layDownBtn_deactivate.SetActive(false);
+
+
+
+        standUpBtn_lay.SetActive(false);
+
+
+
 
     }
 
