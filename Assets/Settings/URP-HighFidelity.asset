@@ -37,8 +37,8 @@ MonoBehaviour:
   m_AdditionalLightsPerObjectLimit: 8
   m_AdditionalLightShadowsSupported: 1
   m_AdditionalLightsShadowmapResolution: 4096
-  m_AdditionalLightsShadowResolutionTierLow: 1024
-  m_AdditionalLightsShadowResolutionTierMedium: 2048
+  m_AdditionalLightsShadowResolutionTierLow: 4096
+  m_AdditionalLightsShadowResolutionTierMedium: 4096
   m_AdditionalLightsShadowResolutionTierHigh: 4096
   m_ReflectionProbeBlending: 1
   m_ReflectionProbeBoxProjection: 1
