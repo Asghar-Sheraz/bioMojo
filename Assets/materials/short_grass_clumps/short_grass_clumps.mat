@@ -7,19 +7,24 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: hdrEvn_sky_01
-  m_Shader: {fileID: 103, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: short_grass_clumps
+  m_Shader: {fileID: -6465566751694194690, guid: c085991702cb75145a8eea742981155a,
+    type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AO:
+        m_Texture: {fileID: 2800000, guid: 7a917300b12de7b48b9da832a6e07afa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -60,12 +65,56 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_21f7054745bd45208adb8ecd858184a9_Texture_1:
+        m_Texture: {fileID: 2800000, guid: fab7b891ccc9f7349b37bf32ae7fe89b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Tex:
-        m_Texture: {fileID: 8900000, guid: 9356221b51c313b4e913be158429a745, type: 3}
+    - _Texture2DAsset_7f6efed187f14f82ac8c850450c528f2_Out_0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _alpha:
+        m_Texture: {fileID: 2800000, guid: fab7b891ccc9f7349b37bf32ae7fe89b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ambientMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _baseColor:
+        m_Texture: {fileID: 2800000, guid: 51d3b0143f4992d4b85318e781e5aebb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _baseMAP:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _cutOut_Map:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _heightMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _maskMAP:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _normal:
+        m_Texture: {fileID: 2800000, guid: aaeeebf6bfad51b449d6c134c4b7abcf, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _normalMAP:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _rough:
+        m_Texture: {fileID: 2800000, guid: b9fafb868ad71ee4a8183e57d898d5d7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -83,8 +132,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
+    - _BUILTIN_QueueControl: -1
+    - _BUILTIN_QueueOffset: 0
     - _Blend: 0
     - _BumpScale: 1
+    - _CastShadows: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
@@ -93,31 +145,58 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Exposure: 1.22
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Rotation: 43
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
     - _WorkflowMode: 1
+    - _ZTest: 4
     - _ZWrite: 1
+    - _ZWriteControl: 0
+    - _ambientPWR: 0.001
+    - _ambientSTG: 0
+    - _ao_val_01: 156.5
+    - _ao_val_02: 26.79
+    - _colorchange: 0
+    - _cutOut_Value: 10
+    - _disp: 0
+    - _heightPWR: 1
+    - _heightSTG: 0
+    - _hue: 0
+    - _maskPWR: 1
+    - _maskSTG: 0
+    - _pwrNormal_A: 0
+    - _pwrNormal_B: 0
+    - _rough_Val: 0
+    - _saturate: 1
+    - _shine_A: 0
+    - _shine_B: 0
+    - _spec_A: 0
+    - _spec_B: 0
+    - _turboSmooth: 0
+    - _windDensity: 0.06
+    - _windStrength: 0.08
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Tint: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+    - _tileTS: {r: 0, g: 0, b: 0, a: 0}
+    - _tiler: {r: 1, g: 1, b: 0, a: 0}
+    - _tint: {r: 0, g: 0, b: 0, a: 0}
+    - _windMovement: {r: 4, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &8483507255457840531
+--- !u!114 &579888778452886744
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
