@@ -20,16 +20,26 @@ public class toggleMenu : MonoBehaviour
 
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.W)) || (Input.GetKeyDown(KeyCode.A)) || (Input.GetKeyDown(KeyCode.S)) || (Input.GetKeyDown(KeyCode.D)))
-        {
-            layDownBtn.SetActive(false);
-            sitDownBtn.SetActive(false);
-        }
-        else if ((Input.GetKeyUp(KeyCode.W)) || (Input.GetKeyUp(KeyCode.A)) || (Input.GetKeyUp(KeyCode.S)) || (Input.GetKeyUp(KeyCode.D)))
-        {
-            layDownBtn.SetActive(true);
-            sitDownBtn.SetActive(true);
-        }
+        //if ((Input.GetKeyDown(KeyCode.W)) || (Input.GetKeyDown(KeyCode.A)) || (Input.GetKeyDown(KeyCode.S)) || (Input.GetKeyDown(KeyCode.D)))
+        //{
+        //    layDownBtn.SetActive(false);
+        //    sitDownBtn.SetActive(false);
+        //}
+        //else if ((Input.GetKeyUp(KeyCode.W)) || (Input.GetKeyUp(KeyCode.A)) || (Input.GetKeyUp(KeyCode.S)) || (Input.GetKeyUp(KeyCode.D)))
+        //{
+        //    layDownBtn.SetActive(true);
+        //    sitDownBtn.SetActive(true);
+        //}
+
+
+        var moveActivated = (Input.GetKey(KeyCode.W)) || (Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.S)) || (Input.GetKey(KeyCode.D));
+        layDownBtn.SetActive(!moveActivated);
+        sitDownBtn.SetActive(!moveActivated);
+
+
+
+
+
         if ((Input.GetKeyDown(KeyCode.W)))
         {
             W_btn.SetActive(true);
@@ -73,9 +83,7 @@ public class toggleMenu : MonoBehaviour
             D_btn.SetActive(false);
             D_opacity_btn.SetActive(true);
 
+
         }
-
-
     }
-
 }
