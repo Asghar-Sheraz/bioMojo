@@ -21,7 +21,8 @@ public class player : MonoBehaviour
     {
         var velocity = Vector3.forward * Input.GetAxis("Vertical") * speed;
         transform.Translate(velocity * Time.deltaTime);
-        transform.Rotate(Vector3.up, Input.GetAxis("Horizontal") * Time.deltaTime * turnSpeed);
+        if (velocity != Vector3.zero)
+            transform.Rotate(Vector3.up, Input.GetAxis("Horizontal") * Time.deltaTime * turnSpeed);
         animator.SetFloat("speed", velocity.z);
 
     }
