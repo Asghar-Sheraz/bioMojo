@@ -6,6 +6,7 @@ public class mojoAnim : MonoBehaviour
 {
 
     public GameObject bioMojoPrefab;
+    public GameObject GoggleAsset;
     public GameObject walkBtn;
     public GameObject stopBtn;
 
@@ -24,6 +25,9 @@ public class mojoAnim : MonoBehaviour
     public GameObject layDownBtn_deactivate;
     public GameObject liftPawBtn_deactivate;
     public GameObject InspectBtn_deactivate;
+    
+    public GameObject gogglesHide_Btn;
+    public GameObject gogglesShow_Btn;
 
     
  
@@ -191,6 +195,19 @@ public class mojoAnim : MonoBehaviour
 
     }
 
+    public void OnGoggleShow()
+    {
+        gogglesHide_Btn.SetActive(false);
+        gogglesShow_Btn.SetActive(true);
+        GoggleAsset.SetActive(false);
+    }
 
+    public void OnGoggleHide()
+    {
+        gogglesHide_Btn.SetActive(true);
+        gogglesShow_Btn.SetActive(false);
+
+        GoggleAsset.SetActive(true);
+    }
 
 }
