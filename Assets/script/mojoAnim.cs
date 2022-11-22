@@ -20,15 +20,16 @@ public class mojoAnim : MonoBehaviour
     public GameObject pawDownInspectBtn;
     public GameObject standUpBtn_lay;
 
+    public GameObject layExtendedBtn;
+    public GameObject layExtendedRevBtn;
+
+
     public GameObject walkBtn_deactivate;
     public GameObject sitDownBtn_deactivate;
     public GameObject layDownBtn_deactivate;
     public GameObject liftPawBtn_deactivate;
     public GameObject InspectBtn_deactivate;
-
-    public GameObject layExtendedBtn;
-    public GameObject layExtendedRevBtn;
-
+    public GameObject layExtendedBtn_deactivate;
 
     public GameObject gogglesHide_Btn;
     public GameObject gogglesShow_Btn;
@@ -51,11 +52,25 @@ public class mojoAnim : MonoBehaviour
     public void OnlayExtended()
     {
         ExecuteTrigger("lay_extended");
+
+        layExtendedBtn.SetActive(false);
+        layExtendedRevBtn.SetActive(true);
+        InspectBtn.SetActive(false);
+        InspectBtn_deactivate.SetActive(true);
+        layExtendedBtn_deactivate.SetActive(true);
+
+
     }
 
     public void OnlayExtendedRev()
     {
         ExecuteTrigger("lay_extended_rev");
+        layExtendedBtn.SetActive(true);
+        layExtendedRevBtn.SetActive(false);
+        InspectBtn.SetActive(true);
+        InspectBtn_deactivate.SetActive(false);
+        layExtendedBtn_deactivate.SetActive(false);
+
     }
 
     public void OnWalk()
@@ -165,6 +180,8 @@ public class mojoAnim : MonoBehaviour
         bioMojoPrefab.GetComponent<player>().enabled = false;
         bioMojoPrefab.GetComponent<toggleMenu>().enabled = false;
 
+        layExtendedBtn.SetActive(true);
+
     }
 
     public void OnLayLift()
@@ -174,6 +191,9 @@ public class mojoAnim : MonoBehaviour
         pawDownInspectBtn.SetActive(true);
 
         InspectBtn_deactivate.SetActive(true);
+
+        layExtendedBtn.SetActive(false);
+
 
 
 
