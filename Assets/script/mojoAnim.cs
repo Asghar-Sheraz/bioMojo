@@ -25,7 +25,11 @@ public class mojoAnim : MonoBehaviour
     public GameObject layDownBtn_deactivate;
     public GameObject liftPawBtn_deactivate;
     public GameObject InspectBtn_deactivate;
-    
+
+    public GameObject layExtendedBtn;
+    public GameObject layExtendedRevBtn;
+
+
     public GameObject gogglesHide_Btn;
     public GameObject gogglesShow_Btn;
 
@@ -44,6 +48,15 @@ public class mojoAnim : MonoBehaviour
     }
 
 
+    public void OnlayExtended()
+    {
+        ExecuteTrigger("lay_extended");
+    }
+
+    public void OnlayExtendedRev()
+    {
+        ExecuteTrigger("lay_extended_rev");
+    }
 
     public void OnWalk()
     {
