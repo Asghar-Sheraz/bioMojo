@@ -22,6 +22,7 @@ public class mojoAnim : MonoBehaviour
 
     public GameObject layExtendedBtn;
     public GameObject layExtendedRevBtn;
+    public GameObject standUpBtn_layextended;
 
 
     public GameObject walkBtn_deactivate;
@@ -56,7 +57,7 @@ public class mojoAnim : MonoBehaviour
         layExtendedBtn.SetActive(false);
         layExtendedRevBtn.SetActive(true);
         InspectBtn.SetActive(false);
-        InspectBtn_deactivate.SetActive(true);
+//      InspectBtn_deactivate.SetActive(true);
         layExtendedBtn_deactivate.SetActive(true);
 
 
@@ -65,14 +66,28 @@ public class mojoAnim : MonoBehaviour
     public void OnlayExtendedRev()
     {
         ExecuteTrigger("lay_extended_rev");
-        layExtendedBtn.SetActive(true);
+//      layExtendedBtn.SetActive(true);
         layExtendedRevBtn.SetActive(false);
-        InspectBtn.SetActive(true);
+//      InspectBtn.SetActive(true);
         InspectBtn_deactivate.SetActive(false);
         layExtendedBtn_deactivate.SetActive(false);
+        standUpBtn_layextended.SetActive(true);
 
     }
 
+    
+    public void OnStandUpBtnLayExtended()
+    {
+        ExecuteTrigger("lay_extendedStandUp");
+        sitDownBtn.SetActive(true);
+        layDownBtn.SetActive(true);
+        sitDownBtn_deactivate.SetActive(false);
+        layDownBtn_deactivate.SetActive(false);
+
+        standUpBtn_layextended.SetActive(false);
+
+    }
+    
     public void OnWalk()
     {
         ExecuteTrigger("walk");
