@@ -86,6 +86,10 @@ public class mojoAnim : MonoBehaviour
 
         standUpBtn_layextended.SetActive(false);
 
+        bioMojoPrefab.GetComponent<player>().enabled = true;
+        bioMojoPrefab.GetComponent<toggleMenu>().enabled = true;
+
+
     }
     
     public void OnWalk()
